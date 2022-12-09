@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form method="POST" action="" novalidate>
+    {% csrf_token %}
+    {{forms.non_field_errors}}
+    <table>
+        {% for field in form %}
+        <tr>
+            <td>{{field.label_tag}}</td>
+            <td>{{field}}</td>
+            <td>{{field.errors}}</td>
+        </tr>
+        {% end for %}
+    </table>
+    <input type="submit" value="submit"><br>
+</form>
+</body>
+</html>
