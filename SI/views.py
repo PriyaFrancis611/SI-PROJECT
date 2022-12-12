@@ -43,8 +43,8 @@ def contact(request):
 def signup(request):
     if request.method=="POST":
         username=request.POST['username']
-        # firstname=request.POST['firstname']
-        # lastname=request.POST['lastname']
+        firstname=request.POST['firstname']
+        lastname=request.POST['lastname']
         email=request.POST['email']
         password=request.POST['password']
         confirm_password=request.POST['confirm_password']
@@ -63,7 +63,7 @@ def signup(request):
                details = Profile()
                details.user = user
                details.gender = request.POST['gender']
-               details.phonenumber = request.POST['phonenumber']
+               details.PhNo = request.POST['PhNo']
                details.country = request.POST['country']
                details.state=request.POST['state']
                details.city=request.POST['city']
