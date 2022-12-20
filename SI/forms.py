@@ -6,7 +6,7 @@ class Registration(forms.Form):
     gender=forms.CharField(max_length=30)
     date_of_birth=forms.CharField(max_length=30)
     email=forms.EmailField()
-    phone_number=forms.IntegerField()
+    contact_no=forms.IntegerField()
     country=forms.CharField(max_length=30)
     state=forms.CharField(max_length=30)
     city=forms.CharField(max_length=30)
