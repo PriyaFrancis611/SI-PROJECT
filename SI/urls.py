@@ -10,6 +10,10 @@ urlpatterns=[
     path('index_admin/',views.index_admin,name='index_admin'),
     path('dashboard/',views.dashboard,name='dashboard'),
     path('courses/',views.courses,name='courses'),
-    path('logout/',views.logout,name='logout')
-    # path('addrec/',views.addrec,name='addrec')
+    path('logout/',views.logout,name='logout'),
+    path('profile_edit/',views.profile_edit,name='profile_edit'),
+    path('profile/',views.profile,name='profile'),
+    path('change_password/',views.change_password,name='change_password'),
+    path('forgot_password/', views.forgot_password, name='forgot_password')
+
 ]
