@@ -2,20 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3ba3ee6f-e0ff-4158-b76e-539ae9acfb35" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/static/profile_edit/css/style.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/forgot_password.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/profile.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/profile_edit.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/reset_password.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/search.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SI/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/SI/models.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SI/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/SI/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SI/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/SI/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projname/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/projname/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/Login.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Login.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/dashboard.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/dashboard.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/forgot_password.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/forgot_password.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/index_admin.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/index_admin.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/index_reg.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/index_reg.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/profile_edit.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/profile_edit.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/services.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/services.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

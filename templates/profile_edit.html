@@ -2,7 +2,6 @@
 {% block content %}
 <div class="container">
     <div class="main-body">
-
           <!-- Breadcrumb -->
           <nav aria-label="breadcrumb" class="main-breadcrumb">
             <ol class="breadcrumb">
@@ -21,8 +20,8 @@
                     <img src="https://bootdey.com/img/Content/avatar/avatar7.png" alt="Admin" class="rounded-circle" width="150">
                     <div class="mt-3">
                       <h4> {{userDetails.first_name}} {{userDetails.last_name}}</h4>
-<!--                      <p class="text-secondary mb-1">Full Stack Developer</p>-->
-
+                      <p class="text-secondary mb-1">Full Stack Developer</p>
+<!---->
 <!--                      <p class="text-muted font-size-sm">{{data.country}},{{data.state}},{{data.city}}</p>-->
 <!--                      <button class="btn btn-primary">Follow</button>-->
 <!--                      <button class="btn btn-outline-primary">Message</button>-->
@@ -55,6 +54,8 @@
 <!--                </ul>-->
 <!--              </div>-->
 <!--            </div>-->
+              <form method="POST" enctype="multipart/form-data">
+                {% csrf_token %}
             <div class="col-md-8">
                <div class="w-100 p-3"></div>
               <div class="card mb-3">
@@ -64,7 +65,8 @@
                       <h6 class="mb-0">Full Name</h6>
                     </div>
                     <div class="col-sm-9 text-secondary">
-                      {{userDetails.first_name}} {{userDetails.last_name}}
+                      <input type="text" value="{{userDetails.first_name}}" name="firstname">
+                      <input type="text" value="{{userDetails.last_name}}" name="last_name">
                     </div>
                   </div>
                   <hr>
@@ -73,7 +75,7 @@
                       <h6 class="mb-0">Email</h6>
                     </div>
                     <div class="col-sm-9 text-secondary">
-                      {{userDetails.email}}
+                      <input type="text" value="{{userDetails.email}}" name="email">
                     </div>
                   </div>
                   <hr>
@@ -83,7 +85,8 @@
                       <h6 class="mb-0">Mobile</h6>
                     </div>
                     {% for data in profiledata %}
-                    <p class="text-muted mb-0">{{data.contact_no}}</p>
+                    <input type="text" value="{{data.contact_no}}" name="contact_no">
+<!--                    <p class="text-muted mb-0">{{data.contact_no}}</p>-->
                     {% endfor %}
                   </div>
                   <hr>
@@ -93,7 +96,8 @@
                       <h6 class="mb-0">Gender</h6>
                     </div>
                     {% for data in profiledata %}
-                    <p class="text-muted mb-0">{{data.gender}}</p>
+                     <input type="text" value="{{data.gender}}" name="gender">
+<!--                    <p class="text-muted mb-0">{{data.gender}}</p>-->
                     {% endfor %}
                   </div>
                   <hr>
@@ -103,7 +107,8 @@
                       <h6 class="mb-0">Date of Birth</h6>
                     </div>
                     {% for data in profiledata %}
-                    <p class="text-muted mb-0">{{data.date_of_birth}}</p>
+                    <input type="text" value="{{data.date_of_birth}}" name="date_of_birth">
+<!--                    <p class="text-muted mb-0">{{data.date_of_birth}}</p>-->
                     {% endfor %}
                   </div>
                   <hr>
@@ -113,7 +118,8 @@
                       <h6 class="mb-0">Country</h6>
                     </div>
                     {% for data in profiledata %}
-                    <p class="text-muted mb-0">{{data.country}}</p>
+                      <input type="text" value="{{data.country}}" name="country">
+<!--                    <p class="text-muted mb-0">{{data.country}}</p>-->
                     {% endfor %}
                   </div>
                   <hr>
@@ -123,7 +129,8 @@
                       <h6 class="mb-0">State</h6>
                     </div>
                     {% for data in profiledata %}
-                    <p class="text-muted mb-0">{{data.state}}</p>
+                    <input type="text" value="{{data.state}}" name="state">
+<!--                    <p class="text-muted mb-0">{{data.state}}</p>-->
                     {% endfor %}
                   </div>
                   <hr>
@@ -133,7 +140,8 @@
                       <h6 class="mb-0">City</h6>
                     </div>
                     {% for data in profiledata %}
-                    <p class="text-muted mb-0">{{data.city}}</p>
+                     <input type="text" value="{{data.city}}" name="city">
+<!--                    <p class="text-muted mb-0">{{data.city}}</p>-->
                     {% endfor %}
                   </div>
                   <hr>
@@ -143,18 +151,23 @@
                     </div>
                     <div class="col-sm-9 text-secondary">
                       {% for data in profiledata %}
-                      <p class="text-muted mb-0">{{data.country}},{{data.state}},{{data.city}}</p>
+                       <input type="text" value="{{data.country}}" name="country">
+                      <input type="text" value="{{data.state}}" name="state">
+                      <input type="text" value="{{data.city}}" name="city">
+<!--                      <p class="text-muted mb-0">{{data.country}},{{data.state}},{{data.city}}</p>-->
                       {% endfor %}
                     </div>
                   </div>
                   <hr>
                   <div class="row">
                     <div class="col-sm-12">
-                      <a class="btn btn-info " target="__blank" href="https://www.bootdey.com/snippets/view/profile-edit-data-and-skills">Edit</a>
+                      <input type="submit" value="Update">
+<!--                      <a class="btn btn-info " target="__blank" href="https://www.bootdey.com/snippets/view/profile-edit-data-and-skills">Update</a>-->
                     </div>
                   </div>
                 </div>
               </div>
+              </form>
 
 <!--              <div class="row gutters-sm">-->
 <!--                <div class="col-sm-6 mb-3">-->

@@ -26,10 +26,16 @@ class City(models.Model):
         return self.name
 
 
+class Forgot_token(models.Model):
+    token = models.CharField(max_length=200)
+    user_id = models.IntegerField()
+
+
 class Profile(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE)
-    forget_token=models.CharField(max_length=1000)
+    # forget_token=models.CharField(max_length=1000)
     contact_no = models.IntegerField()
+    date_of_birth = models.CharField(max_length=30)
     gender = models.CharField(max_length=30)
     country = models.CharField(max_length=30)
     state = models.CharField(max_length=30)
@@ -49,10 +55,10 @@ class Profile(models.Model):
     # confirm_password=models.CharField(max_length=30)
     # upload_avatar=models.FileField(upload_to='documents')
 
-# class Courses(models.Model):
-#     title=models.CharField(max_length=150)
-#     created_at=models.DateTimeField(auto_now_add=True)
-#     description=models.CharField(max_length=550)
-#
+class Courses(models.Model):
+    title=models.CharField(max_length=150)
+    # created_at=models.DateTimeField(auto_now_add=True)
+    description=models.CharField(max_length=550)
+
 #     def __str__(self):
 #         return self.title

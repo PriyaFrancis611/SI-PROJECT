@@ -6,7 +6,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Moderna Bootstrap Template - Index</title>
+  <title>SCOPE INDIA</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
@@ -54,7 +54,7 @@
         <ul>
           <li><a class="active " href="index.html">Home</a></li>
           <li><a href="{% url 'about' %}">About Us</a></li>
-          <li><a href="services.html">Services</a></li>
+          <li><a href="{% url 'services' %}">Services</a></li>
           <li><a href="{% url 'signup' %}">Registration</a></li>
           <li><a href="{% url 'contact' %}">Contact Us</a></li>
           <li><a href="{% url 'login' %}">Login</a></li>
@@ -79,7 +79,7 @@
       </div>
 
       <!-- Slide 2 -->
-      <div class="carousel-item">+
+      <div class="carousel-item">
         <div class="carousel-container">
           <h2 class="animate__animated animate__fadeInDown">Welcome to Scope India</h2>
           <p class="animate__animated animate__fadeInUp">SCOPE INDIA provides courses for Software Programming in Python (Data Science | Artificial Intelligence | Machine Learning | Deep Learning), Java, PHP, .Net, Software Testing Manual and Automation, Cloud in AWS, Azure, Server Administration in MCSE, and RHCE, CCNA, Mobile App Development in Flutter, and Digital Marketing .</p>
@@ -149,7 +149,9 @@
         </div>
 
       </div>
-    </section><!-- End Services Section -->
+    </section>
+
+    <!-- End Services Section -->
 
     <!-- ======= Why Us Section ======= -->
     <section class="why-us section-bg" data-aos="fade-up" date-aos-delay="200">
