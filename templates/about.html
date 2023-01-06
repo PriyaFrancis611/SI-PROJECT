@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 {% load static %}
 <html lang="en">
@@ -6,28 +7,28 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>About - Moderna Bootstrap Template</title>
+  <title>SCOPE INDIA</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
   <!-- Favicons -->
-  <link href="assets/img/favicon.png" rel="icon">
-  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+  <link href="{% static 'assets/img/favicon.png' %}" rel="icon">
+  <link href="{% static 'assets/img/apple-touch-icon.png' %}" rel="apple-touch-icon">
 
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Roboto:300,300i,400,400i,500,500i,700,700i&display=swap" rel="stylesheet">
 
   <!-- Vendor CSS Files -->
-  <link href="assets/vendor/animate.css/animate.min.css" rel="stylesheet">
-  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
-  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
-  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <link href="{% static 'assets/vendor/animate.css/animate.min.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/aos/aos.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/bootstrap-icons/bootstrap-icons.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/boxicons/css/boxicons.min.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/glightbox/css/glightbox.min.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/swiper/swiper-bundle.min.css' %}" rel="stylesheet">
 
   <!-- Template Main CSS File -->
-  <link href="assets/css/style.css" rel="stylesheet">
+  <link href="{% static 'assets/css/style.css' %}" rel="stylesheet">
 
   <!-- =======================================================
   * Template Name: Moderna - v4.10.1
@@ -40,22 +41,24 @@
 <body>
 
   <!-- ======= Header ======= -->
-  <header id="header" class="fixed-top d-flex align-items-center ">
+  <header id="header" class="fixed-top d-flex align-items-center header-transparent">
     <div class="container d-flex justify-content-between align-items-center">
 
       <div class="logo">
-        <h1 class="text-light"><a href="index.html"><span>SCOPE INDIA</span></a></h1>
+       <img src="{% static 'assets/img/scope india.png' % }" class="img-fluid" alt="">
+        <h1 class="text-light"><a href="index.html"><span></span></a></h1>
         <!-- Uncomment below if you prefer to use an image logo -->
         <!-- <a href="index.html"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
       </div>
 
       <nav id="navbar" class="navbar">
         <ul>
-          <li><a class="" href="index.html">Home</a></li>
-          <li><a class="active" href="about.html">About</a></li>
-          <li><a href="services.html">Services</a></li>
-
-          <li><a href="contact.html">Contact Us</a></li>
+          <li><a class="active " href="{% url 'index' %}">Home</a></li>
+<!--          <li><a href="{% url 'about' %}">About Us</a></li>-->
+<!--&lt;!&ndash;          <li><a href="{% url 'services' %}">Services</a></li>&ndash;&gt;-->
+<!--          <li><a href="{% url 'signup' %}">Registration</a></li>-->
+<!--          <li><a href="{% url 'contact' %}">Contact Us</a></li>-->
+<!--          <li><a href="{% url 'login' %}">Login</a></li>-->
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav><!-- .navbar -->
@@ -63,109 +66,102 @@
     </div>
   </header><!-- End Header -->
 
+  <!-- ======= Hero Section ======= -->
+  <section id="hero" class="d-flex justify-cntent-center align-items-center">
+    <div id="heroCarousel" class="container carousel carousel-fade" data-bs-ride="carousel" data-bs-interval="5000">
+
+      <!-- Slide 1 -->
+      <div class="carousel-item active">
+        <div class="carousel-container">
+          <h2 class="animate__animated animate__fadeInDown">SCOPE INDIA, your career partner!
+One of the best Training Destination for Software, Networking and Cloud Computing courses in India</h2>
+<!--          <p class="animate__animated animate__fadeInUp">Software, Networking, and Cloud Professional Education Centre in Kerala from Suffix E Solutions with WORKING PROFESSIONALS oriented on-the-job TRAINING model.</p>-->
+<!--          <a href="" class="btn-get-started animate__animated animate__fadeInUp"></a>-->
+        </div>
+      </div>
+
+      <!-- Slide 2 -->
+      <div class="carousel-item">
+        <div class="carousel-container">
+          <h2 class="animate__animated animate__fadeInDown"></h2>
+          <p class="animate__animated animate__fadeInUp">Software, Networking, and Cloud Professional Education Centre in Kerala from Suffix E Solutions with WORKING PROFESSIONALS oriented on-the-job TRAINING model.SCOPE INDIA provides courses for Software Programming in Python (Data Science | Artificial Intelligence | Machine Learning | Deep Learning), Java, PHP, .Net, Software Testing Manual and Automation, Cloud in AWS, Azure, Server Administration in MCSE, and RHCE, CCNA, Mobile App Development in Flutter, and Digital Marketing.Training with 100% Trusted Job Based Internship Model. SCOPE INDIA has a Strong Placement Cell that provides jobs to 1000's of students every year. We assure you you won't regret it after training from SCOPE INDIA!</p>
+<!--          <a href="" class="btn-get-started animate__animated animate__fadeInUp">Read More</a>-->
+        </div>
+      </div>
+
+      <!-- Slide 3 -->
+<!--      <div class="carousel-item">-->
+<!--        <div class="carousel-container">-->
+<!--          <h2 class="animate__animated animate__fadeInDown"></h2>-->
+<!--          <p class="animate__animated animate__fadeInUp">Training with 100% Trusted Job Based Internship Model. SCOPE INDIA has a Strong Placement Cell that provides jobs to 1000's of students every year. We assure you you won't regret it after training from SCOPE INDIA!</p>-->
+<!--&lt;!&ndash;          <a href="" class="btn-get-started animate__animated animate__fadeInUp">Read More</a>&ndash;&gt;-->
+<!--        </div>-->
+<!--      </div>-->
+
+      <a class="carousel-control-prev" href="#heroCarousel" role="button" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon bx bx-chevron-left" aria-hidden="true"></span>
+      </a>
+
+      <a class="carousel-control-next" href="#heroCarousel" role="button" data-bs-slide="next">
+        <span class="carousel-control-next-icon bx bx-chevron-right" aria-hidden="true"></span>
+      </a>
+
+    </div>
+  </section><!-- End Hero -->
+
   <main id="main">
 
-    <!-- ======= About Us Section ======= -->
-    <section class="breadcrumbs">
-      <div class="container">
-
-        <div class="d-flex justify-content-between align-items-center">
-          <h2>About Us</h2>
-          <ol>
-            <li><a href="index.html">Home</a></li>
-            <li>About Us</li>
-          </ol>
-        </div>
-
-      </div>
-    </section><!-- End About Us Section -->
-
-    <!-- ======= About Section ======= -->
-    <section class="about" data-aos="fade-up">
+    <!-- ======= Services Section ======= -->
+    <section class="services">
       <div class="container">
 
         <div class="row">
-          <div class="col-lg-6">
-            <img src="{% static 'assets/img/about.jpg' %}" class="img-fluid" alt="">
+          <div class="col-md-6 col-lg-3 d-flex align-items-stretch" data-aos="fade-up">
+            <div class="icon-box icon-box-pink">
+              <div class="icon"><i class="bx bxl-dribbble"></i></div>
+              <h4 class="title"><a href="">Training</a></h4>
+              <p class="description">You are trained under Suffix E solutions working Proffessionals,On the job training model</p>
+            </div>
           </div>
-          <div class="col-lg-6 pt-4 pt-lg-0">
-            <h3>SCOPE INDIA</h3>
-            <p class="fst-italic">
-              SCOPE INDIA, your career partner!
-One of the best Training Destination for Software, Networking and Cloud Computing courses in India
-Software, Networking, and Cloud Professional Education Centre in Kerala from Suffix E Solutions with WORKING PROFESSIONALS oriented on-the-job TRAINING model. SCOPE INDIA provides courses for Software Programming in Python (Data Science | Artificial Intelligence | Machine Learning | Deep Learning), Java, PHP, .Net, Software Testing Manual and Automation, Cloud in AWS, Azure, Server Administration in MCSE, and RHCE, CCNA, Mobile App Development in Flutter, and, Digital Marketing. Training with 100% Trusted Job Based Internship Model. SCOPE INDIA has a Strong Placement Cell that provides jobs to 1000's of students every year. We assure you, you won't regret it after training from SCOPE INDIA!
 
-This is how SCOPE INDIA can support both newbies and experienced in the industry to upgrade their skills.
-            </p>
+          <div class="col-md-6 col-lg-3 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="100">
+            <div class="icon-box icon-box-cyan">
+              <div class="icon"><i class="bx bx-file"></i></div>
+              <h4 class="title"><a href="">Internship</a></h4>
+              <p class="description">After course completion you will proceeded to live projects with 6 months experience certificate</p>
+            </div>
           </div>
+
+          <div class="col-md-6 col-lg-3 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="200">
+            <div class="icon-box icon-box-green">
+              <div class="icon"><i class="bx bx-tachometer"></i></div>
+              <h4 class="title"><a href="">Grooming</a></h4>
+              <p class="description">CV preparation,Interview preparation and Personality development</p>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-3 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="200">
+            <div class="icon-box icon-box-blue">
+              <div class="icon"><i class="bx bx-world"></i></div>
+              <h4 class="title"><a href="">Placements</a></h4>
+              <p class="description">Give 100% Free placement support to all our fellow techies through Scope India's placement cell</p>
+            </div>
+          </div>
+
+        </div>
 
       </div>
-    </section><!-- End About Section -->
+    </section>
 
-    <!-- ======= Facts Section ======= -->
+    <!-- End Services Section -->
 
-
-    <!-- ======= Our Skills Section ======= -->
-    <section class="skills" data-aos="fade-up">
-      <div class="container">
-
-        <div class="section-title">
-          <h2>Our Skills</h2>
-          <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
-        </div>
-    </section><!-- End Our Skills Section -->
-
+    <!-- ======= Why Us Section ======= -->
 
 
   <!-- ======= Footer ======= -->
 
 
-    <div class="footer-top">
-      <div class="container">
-        <div class="row">
 
-          <div class="col-lg-3 col-md-6 footer-links">
-            <h4>Useful Links</h4>
-            <ul>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Home</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">About us</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Services</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Terms of service</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Privacy policy</a></li>
-            </ul>
-          </div>
-
-          <div class="col-lg-3 col-md-6 footer-links">
-            <h4>Our Services</h4>
-            <ul>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Full Stack Python</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Full Stack Java</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Full Stack PHP</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Flutter</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">MERN Stack</a></li>
-            </ul>
-          </div>
-
-          <div class="col-lg-3 col-md-6 footer-contact">
-            <h4>Contact Us</h4>
-            <p>
-              SCOPE INDIA,<br> Vasanth Nagar Rd,<br> near JLN Metro Station,<br> Kaloor, Kochi, Kerala 682025<br><br>
-              TC 25, 1st Floor Athens Building,<br> 1403/3, SS Kovil Rd,<br> Thampanoor, Thiruvananthapuram, Kerala 695001<br><br>
-              <strong>Phone:</strong> 9745936073(tvm)<br>7592939481(ekm)<br>
-              <strong>Email:</strong> info@scopeindia.org<br>
-            </p>
-
-          </div>
-
-
-        <!-- All the links in the footer should remain intact. -->
-        <!-- You can delete the links only if you purchased the pro version. -->
-        <!-- Licensing information: https://bootstrapmade.com/license/ -->
-        <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/free-bootstrap-template-corporate-moderna/ -->
-
-      </div>
-    </div>
-  </footer><!-- End Footer -->
 
   <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 

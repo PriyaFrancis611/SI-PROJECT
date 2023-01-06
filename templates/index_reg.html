@@ -3,7 +3,7 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<title>Form-v5 by Colorlib</title>
+	<title>SCOPE INDIA</title>
 	<!-- Mobile Specific Metas -->
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 	<!-- Font-->
@@ -13,12 +13,11 @@
     <link rel="stylesheet" href="{% static 'registration/css/style.css' %}"/>
 </head>
 <body class="form-v5">
-	<div class="page-content">
+
+	<div class="page-content " style="background-color:#0b212d;" >
 		<div class="form-v5-content">
 			<form class="form-detail" action="" method="post">
 				{% csrf_token %}
-				<p>Already have an account</p>
-				<a href="{% url 'login' %}">Login</a>
 				<h2>Register Account Form</h2>
 				<div class="form-row">
 					<label for="username">User Name</label>
@@ -36,20 +35,21 @@
 					<i class="fas fa-user"></i>
 				</div>
 				<div class="form-row">
-					<label for="Gender">Gender</label>
-<!--					<input type="" name="Gender" id="Gender">-->
-					<select name="gender" id="Gender">
-
-						<option value="Female">Female</option>
-						<option value="Male">Male</option>
-						<option value="Others">Others</option>
-					</select>
+					<label for="gender">Gender</label>
+					<input type="text" name="gender" id="gender" class="input-text" placeholder="" required>
 				</div>
+<!--					<div class="form-row">-->
+<!--					<label style="display:inline-block;">Gender</label>-->
+<!--					<input type="radio" style="-webkit-appearance:auto; "  name="Gender" value="Female">Female-->
+<!--					<input type="radio" style="-webkit-appearance:auto; "  name="Gender" value="Male">Male-->
+<!--					<input type="radio" style="-webkit-appearance:auto;"  name="Gender" value="Others">Others-->
+
+<!--				</div>-->
 
 				<div class="form-row">
 					<label for="Date-of-birth">Date Of Birth</label>
 					<input type="date" name="Dateofbirth" id="Date-of-birth" class="input-text" placeholder="Date-of-birth" required pattern="[^@]+@[^@]+.[a-zA-Z]{2,6}">
-					<i class="fa fa-calendar" aria-hidden="true"></i>
+					<i class="fa fa-calendar" ></i>
 				</div>
 
 				<div class="form-row">
@@ -89,13 +89,26 @@
 					<input type="text" name="city" id="city" class="input-text" placeholder="City" required>
 					<i class="fa fa-map-marker-alt"></i>
 				</div>
+				<div class="form-row">
+					<label for="hobbies">Hobbies</label>
+					<input type="text" name="hobbies" id="hobbies" class="input-text" placeholder="" required>
+				</div>
+				{% if messages %}
+<ul class="messages">
+	{% for message in messages %}
+	<li {% if message.tags %} class="{{message.tags}}"{% endif %}>{{message}}</li>
+	{% endfor %}
+</ul>
+{% endif %}
+
 
 				<div class="form-row-last">
 					<input type="submit" name="register" class="register" value="Register">
 				</div>
+
 			</form>
 		</div>
 	</div>
 
-</body><!-- This templates was made by Colorlib (https://colorlib.com) -->
+</body>
 </html>

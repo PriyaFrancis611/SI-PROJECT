@@ -8,6 +8,8 @@ from django.core.mail import send_mail
 from django.contrib.auth.models import User, auth
 from .models import Profile, Forgot_token, Courses
 import random
+from django.contrib import messages
+
 
 
 # Create your views here.
@@ -39,13 +41,26 @@ def profile(request):
     return render(request, 'profile.html')
 
 
-def change_password(request):
-    return render(request, 'change_password.html')
+def change_password(request,token):
+    f_token = Forgot_token.objects.filter(token=token)
+    print(f_token)
+    if f_token is None:
+        return render(request,'password.html')
+    else:
+        if request.method=="POST":
+            newpassword=request.POST['newpassword']
+            confirmnewpassword=request.POST['confirmnewpassword']
+            if newpassword==confirmnewpassword:
+                user = User.objects.get(id=f_token.user_id)
+                user.password=request.POST['newpassword']
+                # user.confirmpassword=request.POST['confirmnewpassword']
+                user.save()
+            return render(request, 'login.html')
 
 def forgot_password(request):
     return render(request,'forgot_password.html')
-def reset_password(request):
-    return render(request,'reset_password')
+def password(request):
+    return render(request,'password.html')
 def services(request):
     return render(request,'services.html')
 
@@ -169,13 +184,15 @@ def signup(request):
                 details.user = user
                 details.gender = request.POST['gender']
                 details.contact_no = request.POST['contact_no']
-                details.date_of_birth=request.POST['dateofbirth']
+                details.date_of_birth=request.POST['Dateofbirth']
                 details.country = request.POST['country']
                 details.state = request.POST['state']
                 details.city = request.POST['city']
+                details.hobbies=request.POST['hobbies']
 
                 details.save()
-                return HttpResponse("successfully saved")
+                messages.add_message(request, messages.INFO, 'already exists')
+                return redirect('login')
         else:
             print('password not matching..')
             return redirect('signup')
@@ -287,20 +304,19 @@ def forgot_password(request):
         tokentable = Forgot_token()
         tokentable.token = token
         tokentable.user_id = user.id
-        message=f'Hi,click on the link to reset your password http://127.0.0.1:8000/change_password/'+token
+        tokentable.save()
+        message=f'Hi,click on the link to reset your password http://127.0.0.1:8000/SI/change_password/'+token
         send_mail('password reset request',message,settings.EMAIL_HOST_USER,[user_email])
-        return redirect('change_password')
+        # return redirect('change_password')
 
-    return render(request,'reset_password.html')
+    return render(request,'forgot_password.html')
 
 # def resetpassword(request,token):
 #     tokentable = Forgot_token()
 
 def search(request):
-    try:
-        q = request.GET['q']
-        courses = Courses.objects.filter(title=q)
-        return render('search.html', {'Courses':courses, 'q':q})
-    except KeyError:
-        return render('search.html')
+    if request.method == "POST":
+        query = request.POST["searchkeyword"]
+        courses = Courses.objects.filter(title__contains=query)
+        return render(request,'search.html', {'Courses':courses})
 

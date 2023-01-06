@@ -14,11 +14,11 @@ urlpatterns=[
     # path('profile_edit/<int:id>',views.profile_edit,name='profile_edit'),
     path('profile_edit/',views.profile_edit,name='profile_edit'),
     path('profile/',views.profile,name='profile'),
-    path('change_password/',views.change_password,name='change_password'),
+    path('change_password/<str:token>',views.change_password,name='change_password'),
     path('forgot_password/', views.forgot_password, name='forgot_password'),
     # path("reset-password/<String:token>",views.resetpassword,name="")
-    path('reset_password/',views.reset_password,name='reset_password'),
-    # path('search/',views.search,name='search'),
+    path('password/',views.password,name='password'),
+    path('search/',views.search,name='search'),
     path('services/',views.services,name='services')
 
 ]
