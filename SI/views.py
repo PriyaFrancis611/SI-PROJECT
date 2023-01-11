@@ -37,6 +37,7 @@ def profile_edit(request):
     return render(request, 'profile_edit.html')
 
 
+
 def profile(request):
     return render(request, 'profile.html')
 
@@ -55,7 +56,9 @@ def change_password(request,token):
                 user.password=request.POST['newpassword']
                 # user.confirmpassword=request.POST['confirmnewpassword']
                 user.save()
-            return render(request, 'login.html')
+
+            return redirect('login')
+        return render(request,'change_password.html')
 
 def forgot_password(request):
     return render(request,'forgot_password.html')
@@ -217,11 +220,11 @@ def login(request):
                     request.session['user_status'] = 'logged in'
                     return redirect('dashboard')
             else:
-                return render(request, 'Login.html')
+                return render(request,'index_temp.html')
         else:
-            return render(request, 'Login.html')
+            return render(request,'index_temp.html')
     else:
-        return render(request, 'Login.html')
+        return render(request,'index_temp.html')
 
 
 def logout(request):
