@@ -28,7 +28,7 @@
       <!-- partial:partials/_sidebar.html -->
       <nav class="sidebar sidebar-offcanvas" id="sidebar">
         <div class="sidebar-brand-wrapper d-none d-lg-flex align-items-center justify-content-center fixed-top">
-          <a class="sidebar-brand brand-logo" href="index.html"><img src="{% static 'assets/img/scope india.jpg' %}" class="img-fluid " style="width:118px;height:66px"  alt=""></a>
+          <a class="sidebar-brand brand-logo" href="index.html"><img src="{% static 'assets/img/scope india.png' %}" class="img-fluid " style="width:150px;height:200px"  alt=""></a>
 <!--          <a class="sidebar-brand brand-logo-mini" href="index.html"><img src="{% static 'dashboard/images/logo-mini.svg' %}" alt="logo" /></a>-->
         </div>
         <ul class="nav">
@@ -40,7 +40,7 @@
                   <span class="count bg-success"></span>
                 </div>
                 <div class="profile-name">
-                  <h5 class="mb-0 font-weight-normal">PRIYA FRANCIS</h5>
+                  <h5 class="mb-0 font-weight-normal">{{userDetails.first_name}} {{userDetails.last_name}}</h5>
 
                 </div>
               </div>

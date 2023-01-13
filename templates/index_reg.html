@@ -1,114 +1,198 @@
 <!DOCTYPE html>
 {% load static %}
-<html>
+<html lang="en">
 <head>
-	<meta charset="utf-8">
 	<title>SCOPE INDIA</title>
-	<!-- Mobile Specific Metas -->
-	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-	<!-- Font-->
-	<link rel="stylesheet" type="text/css" href="{% static 'registration/css/roboto-font.css' %}">
-	<link rel="stylesheet" type="text/css" href="{% static 'registration/fonts/font-awesome-5/css/fontawesome-all.min.css' %}">
-	<!-- Main Style Css -->
-    <link rel="stylesheet" href="{% static 'registration/css/style.css' %}"/>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<!--===============================================================================================-->
+	<link rel="icon" type="image/png" href="{% static 'registration/images/icons/favicon.ico' %}"/>
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{% static 'registration/vendor/bootstrap/css/bootstrap.min.css' %}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{% static 'registration/fonts/font-awesome-4.7.0/css/font-awesome.min.css' %}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{% static 'registration/vendor/animate/animate.css' %}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{% static 'registration/vendor/css-hamburgers/hamburgers.min.css' %}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{% static 'registration/vendor/select2/select2.min.css' %}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{% static 'registration/css/util.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'registration/css/main.css' %}">
+<!--===============================================================================================-->
 </head>
-<body class="form-v5">
+<body>
 
-	<div class="page-content " style="background-color:#0b212d;" >
-		<div class="form-v5-content">
-			<form class="form-detail" action="" method="post">
-				{% csrf_token %}
-				<h2>Register Account Form</h2>
-				<div class="form-row">
-					<label for="username">User Name</label>
-					<input type="text" name="username" id="username" class="input-text" placeholder="username" required>
-					<i class="fas fa-user"></i>
-				</div>
-				<div class="form-row">
-					<label for="firstname">First Name</label>
-					<input type="text" name="firstname" id="firstname" class="input-text" placeholder="Your Name" required>
-					<i class="fas fa-user"></i>
-				</div>
-				<div class="form-row">
-					<label for="lastname">Last Name</label>
-					<input type="text" name="lastname" id="lastname" class="input-text" placeholder="Your Name" required>
-					<i class="fas fa-user"></i>
-				</div>
-				<div class="form-row">
-					<label for="gender">Gender</label>
-					<input type="text" name="gender" id="gender" class="input-text" placeholder="" required>
-				</div>
-<!--					<div class="form-row">-->
-<!--					<label style="display:inline-block;">Gender</label>-->
-<!--					<input type="radio" style="-webkit-appearance:auto; "  name="Gender" value="Female">Female-->
-<!--					<input type="radio" style="-webkit-appearance:auto; "  name="Gender" value="Male">Male-->
-<!--					<input type="radio" style="-webkit-appearance:auto;"  name="Gender" value="Others">Others-->
-
-<!--				</div>-->
-
-				<div class="form-row">
-					<label for="Date-of-birth">Date Of Birth</label>
-					<input type="date" name="Dateofbirth" id="Date-of-birth" class="input-text" placeholder="Date-of-birth" required pattern="[^@]+@[^@]+.[a-zA-Z]{2,6}">
-					<i class="fa fa-calendar" ></i>
+	<div class="limiter">
+		<div class="container-login100">
+			<div class="wrap-login100">
+				<div class="login100-pic js-tilt" data-tilt>
+					<img src="{% static 'registration/images/img-01.png' %}" alt="IMG">
 				</div>
 
-				<div class="form-row">
-					<label for="email"> Email</label>
-					<input type="text" name="email" id="email" class="input-text" placeholder=" Email" required pattern="[^@]+@[^@]+.[a-zA-Z]{2,6}">
-					<i class="fas fa-envelope"></i>
-				</div>
-				<div class="form-row">
-					<label for="password">Password</label>
-					<input type="password" name="password" id="password" class="input-text" placeholder="Your Password" required>
-					<i class="fas fa-lock"></i>
-				</div>
-				<div class="form-row">
-					<label for="conpassword">Confirm Password</label>
-					<input type="password" name="confirm_password" id="conpassword" class="input-text" placeholder="confirm_Password" required>
-					<i class="fas fa-lock"></i>
+				<form class="login100-form validate-form" method="post">
+					{% csrf_token %}
+					<span class="login100-form-title">
+						 Registration
+					</span>
+
+					<div class="wrap-input100 validate-input" data-validate = "Valid username is required">
+						<input class="input100" type="text" name="username" placeholder="Username">
+						<span class="focus-input100"></span>
+						<span class="symbol-input100">
+							<i class="fa fa-user-circle" aria-hidden="true"></i>
+						</span>
+					</div>
+
+					<div class="wrap-input100 validate-input" data-validate = "Valid firstname is required">
+						<input class="input100" type="text" name="firstname" placeholder="Firstname">
+						<span class="focus-input100"></span>
+						<span class="symbol-input100">
+							<i class="fa fa-user-circle" aria-hidden="true"></i>
+						</span>
+					</div>
+
+					<div class="wrap-input100 validate-input" data-validate = "Valid lastname is required">
+						<input class="input100" type="text" name="lastname" placeholder="Lastname">
+						<span class="focus-input100"></span>
+						<span class="symbol-input100">
+							<i class="fa fa-user-circle" aria-hidden="true"></i>
+						</span>
+					</div>
+
+					<div class="wrap-input100 validate-input" data-validate = "gender is required">
+						<input class="input100" type="text" name="gender" placeholder="Gender">
+						<span class="focus-input100"></span>
+						<span class="symbol-input100">
+							<i class="fa fa-user" aria-hidden="true"></i>
+						</span>
+					</div>
+					<div class="wrap-input100 validate-input" data-validate = "Valid date of birth is required">
+						<input class="input100" type="date" name="Dateofbirth" placeholder="Date of birth">
+						<span class="focus-input100"></span>
+						<span class="symbol-input100">
+							<i class="fa fa-calendar" aria-hidden="true"></i>
+						</span>
+					</div>
+
+					<div class="wrap-input100 validate-input" data-validate = "Valid email is required: ex@abc.xyz">
+						<input class="input100" type="email" name="email" placeholder="Email">
+						<span class="focus-input100"></span>
+						<span class="symbol-input100">
+							<i class="fa fa-envelope" aria-hidden="true"></i>
+						</span>
+					</div>
+
+					<div class="wrap-input100 validate-input" data-validate = "contact no is required">
+						<input class="input100" type="number" name="contact_no" placeholder="contact no">
+						<span class="focus-input100"></span>
+						<span class="symbol-input100">
+							<i class="fa fa-phone" aria-hidden="true"></i>
+						</span>
+					</div>
+
+					<div class="wrap-input100 validate-input" data-validate = "Password is required">
+						<input class="input100" type="password" name="password" placeholder="Password">
+						<span class="focus-input100"></span>
+						<span class="symbol-input100">
+							<i class="fa fa-lock" aria-hidden="true"></i>
+						</span>
+					</div>
+
+					<div class="wrap-input100 validate-input" data-validate = "Password is required">
+						<input class="input100" type="password" name="confirm_password" placeholder="Confirm Password">
+						<span class="focus-input100"></span>
+						<span class="symbol-input100">
+							<i class="fa fa-lock" aria-hidden="true"></i>
+						</span>
+					</div>
+
+					<div class="wrap-input100 validate-input" data-validate = "hobby is required">
+						<input class="input100" type="text" name="hobbies" placeholder="Hobbies">
+						<span class="focus-input100"></span>
+						<span class="symbol-input100">
+<!--							<i class="fa fa-map-marker" aria-hidden="true"></i>-->
+						</span>
+					</div>
+
+
+					<div class="wrap-input100 validate-input" data-validate = "country is required">
+						<input class="input100" type="text" name="country" placeholder="Country">
+						<span class="focus-input100"></span>
+						<span class="symbol-input100">
+							<i class="fa fa-map-marker" aria-hidden="true"></i>
+						</span>
+					</div>
+
+					<div class="wrap-input100 validate-input" data-validate = "state is required">
+						<input class="input100" type="text" name="state" placeholder="State">
+						<span class="focus-input100"></span>
+						<span class="symbol-input100">
+							<i class="fa fa-map-marker" aria-hidden="true"></i>
+						</span>
+					</div>
+
+					<div class="wrap-input100 validate-input" data-validate = "city is required">
+						<input class="input100" type="text" name="city" placeholder="City">
+						<span class="focus-input100"></span>
+						<span class="symbol-input100">
+							<i class="fa fa-map-marker" aria-hidden="true"></i>
+						</span>
+					</div>
+
+
+
+
+<!--					<div class="container-login100-form-btn">-->
+<!--						<button class="login100-form-btn">-->
+<!--							Register-->
+<!--						</button>-->
+<!--					</div>-->
+
+					<div class="container-login100-form-btn">
+					<input type="submit" name="register" class="login100-form-btn" value="Register">
 				</div>
 
-				<div class="form-row">
-					<label for="contact_no">Contact no</label>
-					<input type="number" name="contact_no" id="contact_no" class="input-text" placeholder="Contact_no" required>
-					<i class="fas fa-address-card"></i>
-				</div>
-				<div class="form-row">
-					<label for="country">Country</label>
-					<input type="text" name="country" id="country" class="input-text" placeholder="country" required>
-					<i class="fa fa-map-marker-alt"></i>
+<!--					<div class="text-center p-t-12">-->
+<!--						<span class="txt1">-->
+<!--							Forgot-->
+<!--						</span>-->
+<!--						<a class="txt2" href="#">-->
+<!--							Username / Password?-->
+<!--						</a>-->
+<!--					</div>-->
 
-				</div>
-				<div class="form-row">
-					<label for="state">State</label>
-					<input type="text" name="state" id="state" class="input-text" placeholder="State" required>
-					<i class="fa fa-map-marker-alt"></i>
-				</div>
-				<div class="form-row">
-					<label for="city">City</label>
-					<input type="text" name="city" id="city" class="input-text" placeholder="City" required>
-					<i class="fa fa-map-marker-alt"></i>
-				</div>
-				<div class="form-row">
-					<label for="hobbies">Hobbies</label>
-					<input type="text" name="hobbies" id="hobbies" class="input-text" placeholder="" required>
-				</div>
-				{% if messages %}
-<ul class="messages">
-	{% for message in messages %}
-	<li {% if message.tags %} class="{{message.tags}}"{% endif %}>{{message}}</li>
-	{% endfor %}
-</ul>
-{% endif %}
-
-
-				<div class="form-row-last">
-					<input type="submit" name="register" class="register" value="Register">
-				</div>
-
-			</form>
+<!--					<div class="text-center p-t-136">-->
+<!--						<a class="txt2" href="#">-->
+<!--							Create your Account-->
+<!--							<i class="fa fa-long-arrow-right m-l-5" aria-hidden="true"></i>-->
+<!--						</a>-->
+<!--					</div>-->
+				</form>
+			</div>
 		</div>
 	</div>
+
+
+
+
+<!--===============================================================================================-->
+	<script src="{% static 'registration/vendor/jquery/jquery-3.2.1.min.js' %}"></script>
+<!--===============================================================================================-->
+	<script src="{% static 'registration/vendor/bootstrap/js/popper.js' %}"></script>
+	<script src="{% static 'registration/vendor/bootstrap/js/bootstrap.min.js' %}"></script>
+<!--===============================================================================================-->
+	<script src="{% static 'registration/vendor/select2/select2.min.js' %}"></script>
+<!--===============================================================================================-->
+	<script src="{% static 'registration/vendor/tilt/tilt.jquery.min.js' %}"></script>
+	<script >
+		$('.js-tilt').tilt({
+			scale: 1.1
+		})
+	</script>
+<!--===============================================================================================-->
+	<script src="{% static 'registration/js/main.js' %}"></script>
 
 </body>
 </html>

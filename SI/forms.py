@@ -10,7 +10,7 @@ class Registration(forms.Form):
     country=forms.CharField(max_length=30)
     state=forms.CharField(max_length=30)
     city=forms.CharField(max_length=30)
-    # hobbies=forms.CharField(max_length=30)
+    hobbies=forms.CharField(max_length=30)
     password=forms.CharField(max_length=30)
     confirm_password=forms.CharField(max_length=30)
     upload_avatar=forms.FileField()

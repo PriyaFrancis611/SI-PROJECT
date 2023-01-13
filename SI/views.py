@@ -220,11 +220,11 @@ def login(request):
                     request.session['user_status'] = 'logged in'
                     return redirect('dashboard')
             else:
-                return render(request,'index_temp.html')
+                return render(request,'Login.html')
         else:
-            return render(request,'index_temp.html')
+            return render(request,'Login.html')
     else:
-        return render(request,'index_temp.html')
+        return render(request,'Login.html')
 
 
 def logout(request):
