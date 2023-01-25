@@ -2346,3 +2346,14 @@ section {
 #footer .credits a {
   color: #a2cce3;
 }
+
+//////////////// course html //////////////////////
+
+.cr-img{
+ width:200px;
+ height:200px;
+}
+
+.item{
+color:red;
+}

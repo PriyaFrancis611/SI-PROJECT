@@ -1,4 +1,16 @@
-<div class="container mt-2">
+{% load static %}
+    <!doctype html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport"
+              content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link rel="stylesheet" href="{% static 'assets/css/style.css' %}">
+        <title>Document</title>
+    </head>
+    <body>
+    <div class="container mt-2">
 <!--   <div class="card card-block mb-2">
     <h4 class="card-title">Card 1</h4>
     <p class="card-text">Welcome to bootstrap card styles</p>
@@ -8,12 +20,15 @@
       {% for item in Courses %}
     <div class="col-md-3 col-sm-6">
       <div class="card card-block">
-      <h4 class="card-title text-right"><i class="material-icons">settings</i></h4>
-    <img src="https://static.pexels.com/photos/7096/people-woman-coffee-meeting.jpg" alt="Photo of sunset">
+      <h4 class="card-title text-right"><i class="material-icons"></i></h4>
+    <img style="width:200px" src="https://static.pexels.com/photos/7096/people-woman-coffee-meeting.jpg" alt="Photo of sunset">
         <h5 class="card-title mt-3 mb-3">{{item.title}}</h5>
-        <p class="card-text">{{item.title}}</p>
+        <p class="card-text">{{item.description}}</p>
+
   </div>
     </div>
 
 {% endfor %}
 </div>
+    </body>
+    </html>

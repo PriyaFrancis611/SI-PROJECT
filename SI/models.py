@@ -41,7 +41,7 @@ class Profile(models.Model):
     state = models.CharField(max_length=30)
     city = models.CharField(max_length=30)
     hobbies=models.CharField(max_length=200)
-    # upload_avatar=models.FileField(upload_to='documents')
+    upload_avatar=models.FileField(upload_to='documents')
     # avatar = models.ImageField(upload_to='images')
     # username=models.CharField(max_length=30)
     # first_name=models.CharField(max_length=30)

@@ -22,8 +22,11 @@
 
         <div class="card mb-4">
           <div class="card-body text-center">
-            <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-chat/ava1-bg.webp"
-                alt="Avatar" class="img-fluid my-5" style="width: 80px;" />
+               {% for data in profiledata %}
+              <img src="{{data.upload_avatar.url}}" alt="" class="img-fluid my-5" style="width:80px">
+              {% endfor %}
+<!--            <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-chat/ava1-bg.webp"-->
+<!--                alt="Avatar" class="img-fluid my-5" style="width: 80px;" />-->
             <h5 class="my-3">{{userDetails.first_name}} {{userDetails.last_name}}</h5>
 
 <!--            <p class="text-muted mb-1">Full Stack Developer</p>-->
@@ -79,7 +82,7 @@
                 <p class="mb-0">Email</p>
               </div>
               <div class="col-sm-9">
-                <p class="text-muted mb-0">{{userDetails.first_name}} {{userDetails.last_name}}</p>
+                <p class="text-muted mb-0">{{userDetails.email}}</p>
               </div>
             </div>
             <hr>

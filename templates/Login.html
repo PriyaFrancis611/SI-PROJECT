@@ -58,6 +58,11 @@
 							Login
 						</button>
 					</div>
+					{% if messages %}
+					{% for item in messages %}
+					{{item}}
+					{% endfor %}
+					{% endif %}
 
 					<div class="text-center p-t-12">
 						<span class="txt1">

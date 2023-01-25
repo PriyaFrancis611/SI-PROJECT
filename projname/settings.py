@@ -125,3 +125,6 @@ EMAIL_POST = 587
 EMAIL_HOST_USER = 'priya.francis611@gmail.com'
 EMAIL_HOST_PASSWORD = 'ddcrvcqozixpncnj'
 EMAIL_USE_TLS = True
+
+MEDIA_ROOT=os.path.join(BASE_DIR,'MEDIA')
+MEDIA_URL='/MEDIA/'
